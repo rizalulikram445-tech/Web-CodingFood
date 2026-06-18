@@ -4,119 +4,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CodingFood</title>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    
 </head>
 <body>
-    
-    <header>
-     <div class="logo">CodingFood</div>
 
-<nav>
-    <ul>
-        <li><a href="index.html" class="active">Beranda</a></li>
-        <li><a href="Sabtu.html">Sabtu</a></li>
-        <li><a href="Minggu.html">Minggu</a></li>
-    </ul>
-</nav>
-    </div>git
-</header>
+    <div class="container py-3">
 
+        <!-- Header -->
+        <header class="cf-header d-flex flex-wrap justify-content-between align-items-center px-3 px-md-5 py-3 mb-5">
+            <div class="cf-logo">CodingFood</div>
+
+            <nav class="cf-nav">
+                <ul class="nav">
+                    <li class="nav-item"><a href="index.html" class="nav-link active">Beranda</a></li>
+                    <li class="nav-item"><a href="Sabtu.html" class="nav-link">Sabtu</a></li>
+                    <li class="nav-item"><a href="Minggu.html" class="nav-link">Minggu</a></li>
+                </ul>
+            </nav>
+        </header>
 
         <!-- Hero -->
-    <section class="hero">        
-        <div class="hero-text">
-            <h1>Selamat datang di CodingFood resto</h1>      
-            <p>restoran kami menerima banyak lowongan kerja setiap tahunnya. <br>Yuk...!!! daftar kan diri di restoran kami😊</p>
-            <P>Kuota yang diterima:</P>
-            <ul>
-                <li>Minimal umur 17 tahun</li>
-                <li>Sudah memiliki KTP</li>
-                <li>Tamat SMA</li>
-            </ul>
-        </div>
-   
-        <div class="hero-photo">
-            <img src="assets/koki.jpeg" alt="Restoran">
-        </div>
-    </section>
+        <section class="cf-hero row align-items-center g-4 mb-4">
+            <div class="col-12 col-md-8 cf-hero-text order-2 order-md-1">
+                <h1 class="display-6">Selamat datang di CodingFood resto</h1>
+                <p>Restoran kami menerima banyak lowongan kerja setiap tahunnya. <br>Yuk...!!! daftarkan diri di restoran kami</p>
+                <p class="mb-1">Kuota yang diterima:</p>
+                <ul>
+                    <li>Minimal umur 17 tahun</li>
+                    <li>Sudah memiliki KTP</li>
+                    <li>Tamat SMA</li>
+                </ul>
+            </div>
 
-    <!-- Menu -->
-    <section class="menu">
+            <div class="col-12 col-md-4 order-1 order-md-2 text-center">
+                <div class="cf-hero-photo">
+                    <img src="assets/koki.jpeg" alt="Restoran">
+                </div>
+            </div>
+        </section>
 
-        <div class="card">
-            <img src="assets/nasgor.jpeg" alt="Nasi Goreng">
-            <h3>Nasi Goreng</h3>
-            <p>Harga Rp20.000</p>
-        </div>
+        <!-- Menu Makanan -->
+        <section class="mb-4">
+            <div class="row g-4">
 
-        <div class="card">
-            <img src="assets/mie goreng.jpeg" alt="Mie Goreng">
-            <h3>Mie Goreng</h3>
-            <p>Harga Rp20.000</p>
-        </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                    <div class="cf-card p-4">
+                        <div class="cf-gambar">
+                            <img src="assets/nasgor.jpeg" alt="Nasi Goreng">
+                        </div>
+                        <h3>Nasi Goreng</h3>
+                        <p>Rp20.000</p>
+                    </div>
+                </div>
 
-        <div class="card">
-            <img src="assets/mie ayam.jpeg" alt="Mie ayam">
-            <h3>Mie ayam</h3>
-            <p>Harga Rp20.000</p>
-        </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                    <div class="cf-card p-4">
+                        <div class="cf-gambar">
+                            <img src="assets/mie goreng.jpeg" alt="Mie Goreng">
+                        </div>
+                        <h3>Mie Goreng</h3>
+                        <p>Rp20.000</p>
+                    </div>
+                </div>
 
-    </section>
-    <section class="menu">
+                <div class="col-12 col-sm-6 col-md-4">
+                    <div class="cf-card p-4">
+                        <div class="cf-gambar">
+                            <img src="assets/mie ayam.jpeg" alt="Mie ayam">
+                        </div>
+                        <h3>Mie ayam</h3>
+                        <p>Rp20.000</p>
+                    </div>
+                </div>
 
-        <div class="card">
-            <img src="assets/strawberry ice.jpeg" alt="strawberry ice">
-            <h3>Strawberry ice</h3>
-            <p>Harga Rp20.000</p>
-        </div>
+            </div>
+        </section>
 
-        <div class="card">
-            <img src="assets/maggo ice.jpeg" alt="manggo ice">
-            <h3>Manggo ice</h3>
-            <p>Harga Rp20.000</p>
-        </div>
+        <!-- Menu Minuman -->
+        <section class="mb-4">
+            <div class="row g-4">
 
-        <div class="card">
-            <img src="assets/macha late.jpeg" alt="Macha late">
-            <h3>Macha late</h3>
-            <p>Harga Rp15.000</p>
-        </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                    <div class="cf-card p-4">
+                        <div class="cf-gambar">
+                            <img src="assets/strawberry ice.jpeg" alt="strawberry ice">
+                        </div>
+                        <h3>Strawberry ice</h3>
+                        <p>Rp20.000</p>
+                    </div>
+                </div>
 
-        <!-- PENDAFTARAN KARYAWAN -->
-    </section>
-<section class="pendaftaran">
+                <div class="col-12 col-sm-6 col-md-4">
+                    <div class="cf-card p-4">
+                        <div class="cf-gambar">
+                            <img src="assets/maggo ice.jpeg" alt="manggo ice">
+                        </div>
+                        <h3>Manggo ice</h3>
+                        <p>Rp20.000</p>
+                    </div>
+                </div>
 
-    <h2>Pendaftaran Karyawan</h2>
+                <div class="col-12 col-sm-6 col-md-4">
+                    <div class="cf-card p-4">
+                        <div class="cf-gambar">
+                            <img src="assets/macha late.jpeg" alt="Macha late">
+                        </div>
+                        <h3>Macha late</h3>
+                        <p>Rp15.000</p>
+                    </div>
+                </div>
 
-    <form>
-        <input type="text" placeholder="Nama Lengkap" required>
-        <input type="email" placeholder="Email" required>
-        <input type="tel" placeholder="Nomor Telepon" required>
-        <select required>
-            <option value="">Pilih Posisi</option>
-            <option>CEO</option>
-            <option>Chef</option>
-            <option>Kasir</option>
-            <option>Pelayan</option>
-            <option>Barista</option>
-        </select>
-        <button type="submit">Daftar Sekarang</button>
-    </form>
-</section>
+            </div>
+        </section>
 
-<footer>
-        <p id="copyright">
-            © 2026 Loker RizzFood resto. Ayo buruan teman-teman....!!!😊
-        </p>
+        <!-- Pendaftaran Karyawan -->
+        <section class="cf-pendaftaran p-3 p-md-5 mb-4">
+            <h2 class="text-center mb-4">Pendaftaran Karyawan</h2>
 
-        <nav class="footer-nav">
-            <a href="#kontak">☎️Kontak</a> 
-            <a href="#hero-bg">📍Alamat</a> 
-        </nav>
-    </footer>
-<script src="script.js"></script>
+            <form id="pendaftaranForm" class="row g-3">
+                <div class="col-12 col-md-6">
+                    <input type="text" class="form-control" placeholder="Nama Lengkap" required>
+                </div>
+                <div class="col-12 col-md-6">
+                    <input type="email" class="form-control" placeholder="Email" required>
+                </div>
+                <div class="col-12 col-md-6">
+                    <input type="tel" class="form-control" placeholder="Nomor Telepon" required>
+                </div>
+                <div class="col-12 col-md-6">
+                    <select class="form-select" required>
+                        <option value="">Pilih Posisi</option>
+                        <option>Chef</option>
+                        <option>Kasir</option>
+                        <option>Pelayan</option>
+                        <option>Barista</option>
+                    </select>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-daftar w-100 py-3">Daftar Sekarang</button>
+                </div>
+            </form>
+        </section>
 
+        <!-- Footer -->
+        <footer class="cf-footer text-center p-4">
+            <p id="copyright" class="mb-2">
+                © 2026 Loker CodingFood resto. Ayo buruan teman-teman....!!!
+            </p>
+
+            <nav class="footer-nav">
+                <a href="#kontak">☎️ Kontak</a>
+                <a href="#hero-bg" class="ms-3">📍 Alamat</a>
+            </nav>
+        </footer>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
 </html>

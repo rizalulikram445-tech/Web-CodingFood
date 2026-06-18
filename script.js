@@ -1,33 +1,41 @@
+// ===========================================================
+// CodingFood — script.js
+// Catatan: selector "loginForm" dan ".switch-box button" pada
+// versi sebelumnya tidak cocok dengan elemen apa pun di
+// halaman ini, sehingga tombol terkait tidak akan berfungsi.
+// Script ini disesuaikan agar semua tombol benar-benar bekerja.
+// ===========================================================
 
-// Mengambil semua tombol yang ada di dalam class "switch-box" lalu menyimpan dalam satu fariabel tab
-const tabs = document.querySelectorAll(".switch-box button");
+document.addEventListener("DOMContentLoaded", function () {
 
-// Melakukan perulangan untuk setiap tombol
-tabs.forEach(tab => {
+    // -------------------------------------------------------
+    // Tab switch (jika suatu saat ada elemen .switch-box button)
+    // Dibuat aman: hanya berjalan kalau elemennya memang ada.
+    // -------------------------------------------------------
+    const tabs = document.querySelectorAll(".switch-box button");
 
-    // Memberikan clik pada setiap tombol even listener
-    tab.addEventListener("click", () => {
+    if (tabs.length > 0) {
+        tabs.forEach(tab => {
+            tab.addEventListener("click", () => {
+                tabs.forEach(btn => btn.classList.remove("active"));
+                tab.classList.add("active");
+            });
+        });
+    }
 
-        // Menghapus class "active" dari semua tombol
-        tabs.forEach(btn => btn.classList.remove("active"));
+    // -------------------------------------------------------
+    // Form Pendaftaran Karyawan (index.html)
+    // id disesuaikan menjadi "pendaftaranForm" agar sesuai
+    // dengan id yang benar-benar ada di halaman.
+    // -------------------------------------------------------
+    const pendaftaranForm = document.getElementById("pendaftaranForm");
 
-        // Menambahkan class "active" ke tombol yang diklik
-        tab.classList.add("active");
-    });
+    if (pendaftaranForm) {
+        pendaftaranForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            alert("Pendaftaran berhasil! Tim kami akan segera menghubungi Anda.");
+            pendaftaranForm.reset();
+        });
+    }
+
 });
-
-
-// Mengambil form yang memiliki id="loginForm"
-document.getElementById("loginForm")
-
-    // Menambahkan event saat form disubmit
-    .addEventListener("submit", function(e){
-
-        // Mencegah halaman refresh saat tombol submit ditekan
-        e.preventDefault();
-
-        // Menampilkan pesan popup
-        alert("Login berhasil!");
-});
-
-

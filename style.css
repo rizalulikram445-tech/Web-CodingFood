@@ -1,228 +1,175 @@
- *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif; 
+/* =======================================================
+   CodingFood — Custom CSS (pelengkap Bootstrap)
+   Catatan: Bootstrap menangani grid, spacing utility, dan
+   responsivitas dasar. File ini hanya berisi style yang
+   TIDAK tersedia di Bootstrap, supaya tema warna & bentuk
+   asli (burlywood, antiquewhite, rounded card) tetap sama.
+   ======================================================= */
+
+:root{
+    --cf-bg: antiquewhite;       /* warna latar belakang body */
+    --cf-accent: burlywood;      /* warna khas header, hero, card, footer */
+    --cf-border: #444;           /* warna garis pinggir */
+    --cf-orange: #ff6b00;        /* warna tombol pendaftaran */
 }
 
 body{
-    padding: 30px;
-    background-color: antiquewhite;
+    background-color: var(--cf-bg);
+    font-family: Arial, sans-serif;
 }
 
-/* Header */
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 20px ;
-     border: 2px solid #444;
-
-    padding: 20px 50px;
-    background-color: burlywood;
-
+/* ============ HEADER ============ */
+header.cf-header{
+    border-radius: 20px;
+    border: 2px solid var(--cf-border);
+    background-color: var(--cf-accent);
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
+    z-index: 1030;
+    margin-bottom: auto;
 }
 
-nav ul{
-    display: flex;
-    list-style: none;
-    gap: 30px;
-}
-
-nav ul li a{
-    text-decoration: none;
-    color: #333;
-    font-weight: 600;
-    transition: all 0.6s ease;
-    
-}
-
-nav ul :hover{
-    border-bottom: #333;
-
-}
-
-nav ul li a:hover{
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
-}
-
-/* HERO */
-.hero{
-    border: 2px solid #444;
-    padding: 40px 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 280px;
-    border-radius: 50px;
-    box-shadow: 0 30px 10px rgba(0, 0, 0, 0.2);
-    background-color: burlywood;
-}
-
-.hero-text h1{
-    font-size: 35px;
-    font-weight: normal;
-    font-weight: bold;
-}
-
-.hero-photo{
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 2px solid #444;
-}
-
-.hero-photo img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* MENU */
-.menu{
-    padding: 30px;
-    margin-top: 30px;
-    display: flex;
-    justify-content: space-around;
-    gap: 30px;
-
-}
-
-.card{
-    width: 350px;
-    height: 300px;
-    border: 2px solid #444;
-    border-radius: 25px;
-    padding: 25px;
-    text-align: center;
-    
-    background-color: burlywood;
-    transition: 0.5s;
-}
-.card:hover{
-    transform: translate(-12px);
-    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
-}
-
-.logo{
+.cf-logo{
     font-size: 28px;
     font-weight: bold;
     color: #333;
 }
 
-
-/* Hero */
-.hero{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 50px;
-    margin-top: 20px;
+/* Navbar utama (pengganti nav ul li biasa) */
+.cf-nav .nav-link{
+    color: #333;
+    font-weight: 600;
+    transition: all 0.4s ease;
 }
 
-.card img{
+.cf-nav .nav-link:hover,
+.cf-nav .nav-link.active{
+    color: #fff;
+}
+
+.cf-nav .nav-link.active{
+    border-bottom: 2px solid #333;
+}
+
+/* ============ HERO ============ */
+.cf-hero{
+    border: 2px solid var(--cf-border);
+    border-radius: 50px;
+    box-shadow: 0 20px 10px rgba(0,0,0,0.2);
+    background-color: var(--cf-accent);
+    padding: 2.5rem;
+}
+
+.cf-hero h1{
+    font-weight: bold;
+}
+
+.cf-hero-photo{
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--cf-border);
+    margin: 0 auto;
+}
+
+.cf-hero-photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ============ MENU CARD ============ */
+.cf-card{
+    border: 2px solid var(--cf-border);
+    border-radius: 25px;
+    background-color: var(--cf-accent);
+    text-align: center;
+    transition: 0.4s ease;
+    height: 100%;
+}
+
+.cf-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 0 18px rgba(0,0,0,1);
+}
+
+.cf-card .cf-gambar img,
+.cf-card img{
     width: 140px;
     height: 140px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #444;
-    margin-bottom: 20px;
+    border: 2px solid var(--cf-border);
+    margin: 0 auto 1rem auto;
+    display: block;
 }
 
-.card h3{
-    margin-bottom: 50px;
-    font-size: 24px;
+.cf-card h3{
     font-weight: normal;
+    font-size: 24px;
 }
 
-.card p{
-    margin-bottom: 35px;
+.cf-card p{
     font-size: 20px;
+    margin-bottom: 0;
 }
 
-.card button{
-    width: 140px;
-    height: 45px;
+.cf-card .btn-cf{
     border: 2px solid #807e7e;
     border-radius: 10px;
     background: rgb(205, 205, 205);
-    font-size: 18px;
-    cursor: pointer;
-} 
+    color: #222;
+}
 
-/* PENDAFTARAN */
-.pendaftaran{
-    margin-top: 60px;
-    padding: 40px;
+.cf-card .btn-cf:hover{
+    background: rgb(190, 190, 190);
+}
+
+/* ============ PENDAFTARAN ============ */
+.cf-pendaftaran{
     background: #fff;
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-.pendaftaran h2{
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.pendaftaran form{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.pendaftaran input,
-.pendaftaran select,
-.pendaftaran textarea{
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    font-size: 16px;
-}
-
-.pendaftaran textarea{
-    resize: vertical;
-    min-height: 120px;
-}
-
-.pendaftaran button{
-    padding: 15px;
+.cf-pendaftaran .btn-daftar{
+    background: var(--cf-orange);
+    color: #fff;
+    font-weight: bold;
     border: none;
     border-radius: 10px;
-    background: #ff6b00;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
-.pendaftaran button:hover{
+.cf-pendaftaran .btn-daftar:hover{
     transform: translateY(-3px);
+    background: #e65f00;
+    color: #fff;
 }
 
-footer{
-    background: burlywood;
+/* ============ FOOTER ============ */
+footer.cf-footer{
+    background: var(--cf-accent);
     color: #222;
-    text-align: center;
-    padding: 20px;
-    margin-top: 30px;
     border: 2px solid #222;
     border-radius: 10px;
-    transform: translate(-12px);
-    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
-footer nav a{
+.cf-footer a{
     color: #222;
-    margin: 0 10px;
+    text-decoration: none;
 }
-.active{
-     border-bottom: 3px solid #333;
+
+.cf-footer a:hover{
+    text-decoration: underline;
+}
+
+/* ============ TAB SWITCH (Sabtu/Minggu jika dipakai sebagai tab) ============ */
+.switch-box .btn.active{
+    background-color: var(--cf-orange);
+    color: #fff;
+    border-color: var(--cf-orange);
 }
