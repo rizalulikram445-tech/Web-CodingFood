@@ -25,14 +25,14 @@ header.cf-header{
     background-color: var(--cf-accent);
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     position: sticky;
-    top: 0;
-    z-index: 1030;
-    margin-bottom: auto;
+    top: 0;   /*Menempel di bagian paling atas layar*/
+    z-index: 1030; /*Header tampil di atas elemen lain*/
+    margin-bottom: auto; /*jarak bawah otomatis*/
 }
 
 .cf-logo{
     font-size: 28px;
-    font-weight: bold;
+    font-weight: bold; /*membuat fond menjadi bold*/
     color: #333;
 }
 
@@ -66,32 +66,32 @@ header.cf-header{
 }
 
 .cf-hero-photo{
-    width: 220px;
-    height: 220px;
+    width: 220px; /*lebar kotak*/
+    height: 220px; /*tinggi kotak*/
     border-radius: 50%;
     overflow: hidden;
     border: 2px solid var(--cf-border);
-    margin: 0 auto;
+    margin: 0 auto; /*jarak di beri horizontal*/
 }
 
 .cf-hero-photo img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /*gambar di potong biar pas memenuhi lingkaran */
 }
 
 /* ============ MENU CARD ============ */
 .cf-card{
     border: 2px solid var(--cf-border);
-    border-radius: 25px;
     background-color: var(--cf-accent);
+    border-radius: 25px;
     text-align: center;
     transition: 0.4s ease;
     height: 100%;
 }
 
 .cf-card:hover{
-    transform: translateY(-10px);
+    transform: translateY(-10px); /*card bergerak saat diletakkan cursor*/
     box-shadow: 0 0 18px rgba(0,0,0,1);
 }
 
@@ -103,7 +103,7 @@ header.cf-header{
     object-fit: cover;
     border: 2px solid var(--cf-border);
     margin: 0 auto 1rem auto;
-    display: block;
+    display: block; /*Gambar diperlakukan sebagai elemen blok agar margin auto bisa bekerja*/
 }
 
 .cf-card h3{
@@ -113,7 +113,7 @@ header.cf-header{
 
 .cf-card p{
     font-size: 20px;
-    margin-bottom: 0;
+    margin-bottom: 0; /*Menghilangkan jarak bawah default paragraf*/
 }
 
 .cf-card .btn-cf{
@@ -144,7 +144,7 @@ header.cf-header{
 }
 
 .cf-pendaftaran .btn-daftar:hover{
-    transform: translateY(-3px);
+    transform: translateY(-3px); /*card bergerak saat diletakkan cursor*/
     background: #e65f00;
     color: #fff;
 }
@@ -164,11 +164,11 @@ footer.cf-footer{
 }
 
 .cf-footer a:hover{
-    text-decoration: underline;
+    text-decoration: underline; /*Muncul garis bawah pada link saat kursor di atasnya*/
 }
 
 /* ============ TAB SWITCH (Sabtu/Minggu jika dipakai sebagai tab) ============ */
-.switch-box .btn.active{
+.switch-box .btn.active{  /*Bagian ini mengatur tampilan tab aktif (misal tab "Sabtu" atau "Minggu" yang sedang dipilih).*/
     background-color: var(--cf-orange);
     color: #fff;
     border-color: var(--cf-orange);
